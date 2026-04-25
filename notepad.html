@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lagos City</title>
+
+<style>
+/* Reset default browser styles */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
+
+/* HEADER */
+header{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/7/7c/Lagos_Island_skyline.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  animation:fadeIn 2s ease-in-out;
+}
+
+header h1{
+  font-size:3rem;
+  animation:slideDown 1.5s ease;
+}
+
+header p{
+  margin-top:10px;
+}
+
+/* SECTION */
+section{
+  padding:50px 20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:#1e293b;
+  border-radius:15px;
+  padding:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+/* IMAGE GRID INSIDE CARD */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.image-grid img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes slideDown{
+  from{transform:translateY(-50px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header h1{
+    font-size:2rem;
+  }
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Welcome to Lagos</h1>
+    <p>The City of Energy</p>
+  </div>
+</header>
+
+<section>
+  <h2>About Lagos</h2>
+  <p>Lagos is a vibrant city known for its culture, economy, and lifestyle.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Infrastructure</h3>
+      <div class="image-grid">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Third_Mainland_Bridge_Lagos.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Lagos_Island_skyline.jpg">
+      </div>
+      <p>Modern bridges and skyline define Lagos development.</p>
+    </div>
+
+    <div class="card">
+      <h3>Nature</h3>
+      <div class="image-grid">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Lekki_Conservation_Centre.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Lekki_Conservation.jpg">
+      </div>
+      <p>Nature reserves provide relaxation and adventure.</p>
+    </div>
+
+    <div class="card">
+      <h3>Beaches</h3>
+      <div class="image-grid">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Tarkwa_Bay_Beach_Lagos.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Lagos_beach.jpg">
+      </div>
+      <p>Beautiful beaches attract tourists all year.</p>
+    </div>
+
+    <div class="card">
+      <h3>Culture</h3>
+      <div class="image-grid">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Lagos_market.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Nigerian_market.jpg">
+      </div>
+      <p>Markets and music show Lagos rich culture.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lagos Project</p>
+</footer>
+
+</body>
+</html>
